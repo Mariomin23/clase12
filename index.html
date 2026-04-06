@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mis Calculadoras</title>
+    <style>
+        body { font-family: sans-serif; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; background-color: #f4f4f9; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h3 { margin-top: 0; color: #333; }
+        input { width: 80px; padding: 8px; margin: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 8px 15px; cursor: pointer; border: none; border-radius: 4px; color: white; font-weight: bold; }
+        .res { margin-top: 10px; color: #007BFF; font-weight: bold; }
+        
+        /* Colores por operación */
+        .btn-suma { background-color: #28a745; }
+        .btn-resta { background-color: #dc3545; }
+        .btn-mult { background-color: #ffc107; color: black; }
+        .btn-div { background-color: #17a2b8; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h3>Suma</h3>
+        <form id="formSuma" onsubmit="suma(event)">
+            <input type="number" id="s1" placeholder="N1" required> +
+            <input type="number" id="s2" placeholder="N2" required>
+            <button type="submit" class="btn-suma">Sumar</button>
+        </form>
+        <div id="resuma" class="res"></div>
+    </div>
+
+    <div class="card">
+        <h3>Resta</h3>
+        <form id="formResta" onsubmit="resta(event)">
+            <input type="number" id="r1" placeholder="N1" required> -
+            <input type="number" id="r2" placeholder="N2" required>
+            <button type="submit" class="btn-resta">Restar</button>
+        </form>
+        <div id="reresta" class="res"></div>
+    </div>
+
+    <div class="card">
+        <h3>Multiplicación</h3>
+        <form id="formMult" onsubmit="multiplicacion(event)">
+            <input type="number" id="m1" placeholder="m1" required> ×
+            <input type="number" id="m2" placeholder="m2" required>
+            <button type="submit" class="btn-mult">Multiplicar</button>
+        </form>
+        <div id="remultiplica" class="res"></div>
+    </div>
+
+    <div class="card">
+        <h3>División</h3>
+        <form id="formDiv" onsubmit="divide(event)">
+            <input type="number" id="d1" placeholder="d1" required> ÷
+            <input type="number" id="d2" placeholder="d2" required>
+            <button type="submit" class="btn-div">Dividir</button>
+        </form>
+        <div id="resdiv" class="res"></div>
+    </div>
+
+</body>
+</html>
+
+    <script src="/Assets/js/script.js"></script>
+</body>
+</html>
